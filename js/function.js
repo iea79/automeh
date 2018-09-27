@@ -76,6 +76,23 @@ $(document).ready(function() {
 
     checkOnResize();
 
+    $('.topSlider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        draggable: false,
+        fade: true,
+        asNavFor: '.topSlider_thumbs'
+    });
+    $('.topSlider_thumbs').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.topSlider',
+        arrows: false,
+        dots: false,
+        // centerMode: false,
+        focusOnSelect: true
+    });
+
 });
 
 $(window).resize(function(event) {
@@ -90,7 +107,12 @@ $(window).resize(function(event) {
 
 function checkOnResize() {
    	// gridMatch();
-    fontResize();
+    // fontResize();
+    if (isXsWidth()) {
+        $('.footer__center').insertBefore('.footer__left');
+    } else {
+        $('.footer__center').insertAfter('.footer__right');
+    }
 }
 
 function gridMatch() {

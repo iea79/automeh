@@ -1,21 +1,43 @@
 // begin header 
-header.header
+header.header.header_contrast
 	.container_center
+		
+		.header__left
+			a(href="/").logo.logo_contrast
+		
+		// begin .header__action 
+		.header__action
+			a.phone(href="tel:") +7 916 997-67-32
+			.soc
+				a(href="#").soc__item 
+					i.icon-whatsapp
+				a(href="#").soc__item 
+					i.icon-viber
+				a(href="#").soc__item 
+					i.icon-telegram
 
-		a.logo
-			img(src="img/logo.png")
+		// end .header__action 
 
-		// begin navbar 
+		// begin.header__center 
+		.header__center
+			
+			// begin navbar 
+			ul.navbar
+				li.navbar__item
+					a(href="#").navbar__link
+						i.icon-cargo 
+						|Отправка на следующий день
+				li.navbar__item
+					a(href="#").navbar__link
+						i.icon-coin-ru 
+						|Цены производителя
+				li.navbar__item
+					a(href="#").navbar__link
+						i.icon-like 
+						|100% гарантия качества
 
-		ul.navbar
+			// end navbar 
 
-			li.navbar__item
-				a.navbar__link Item_1
-			li.navbar__item
-				a.navbar__link Item_2
-			li.navbar__item
-				a.navbar__link Item_3
-
-		// end navbar 
+		// end.header__center 
 
 // end header 

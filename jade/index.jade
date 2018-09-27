@@ -7,3 +7,183 @@ block title
 	title Home
 
 block content
+	// begin topSlider 
+	.topSlider__wrap
+		.topSlider
+			- var slide = 4;
+			-for (var i = 0; i < slide; i++) {
+				.topSlider__item(style="background-image: url('img/f-slide.jpg')")
+					.topSlider__content
+						.topSlider__title Накидки на сиденья авто из натурального меха
+						.topSlider__sub Закажите набор из 2-х или 4-х накидок по специальной цене и получайте еще больше удовольствия от езды в холодное время года.
+						.topSlider__action
+							button.btn.btn_contrast Смотреть каталог	
+			-};
+		.topSlider_thumbs
+			-for (var i = 0; i < slide; i++) {
+				.topSlider__item
+					img(src="img/f-slide-sm.jpg", alt="")
+			-};
+	// end topSlider 
+
+	.container_center
+		h2.title.title__line Выберите категорию
+		.category
+			.category__grid.grid
+				.category__wrap
+					a.category__item(href="#")
+						.category__img
+							img(src="img/cat1.png", alt="")
+						.category__name
+							span Искуственный мех
+					a.category__item(href="#")
+						.category__img
+							img(src="img/cat2.png", alt="")
+						.category__name
+							span Шерсть
+					a.category__item(href="#")
+						.category__img
+							img(src="img/cat3.png", alt="")
+						.category__name
+							span Oвчина
+					a.category__item(href="#")
+						.category__img
+							img(src="img/cat4.png", alt="")
+						.category__name
+							span Мутон
+				.category__wrap.category__wrap_sm
+					a.category__item(href="#")
+						.category__img
+							img(src="img/cat-sm1.png", alt="")
+						.category__name
+							span Бежевые
+					a.category__item(href="#")
+						.category__img
+							img(src="img/cat-sm2.png", alt="")
+						.category__name
+							span Длинный ворс
+					a.category__item(href="#")
+						.category__img
+							img(src="img/cat-sm3.png", alt="")
+						.category__name
+							span Белые
+					a.category__item(href="#")
+						.category__img
+							img(src="img/cat-sm4.png", alt="")
+						.category__name
+							span Короткий ворс
+					a.category__item(href="#")
+						.category__img
+							img(src="img/cat-sm5.png", alt="")
+						.category__name
+							span Черные
+					a.category__item(href="#")
+						.category__img
+							img(src="img/cat-sm6.png", alt="")
+						.category__name
+							span На передние сиденья
+					a.category__item(href="#")
+						.category__img
+							img(src="img/cat-sm7.png", alt="")
+						.category__name
+							span Коричневые
+					a.category__item(href="#")
+						.category__img
+							img(src="img/cat-sm1.png", alt="")
+						.category__name
+							span На заднее сиденье
+
+	.container_center
+		h2.title.title__line Натуральная шерсть
+		- var plate = 3;
+		- var col = 3;
+		include block/product.jade
+
+	.container_center
+		h2.title.title__line Овечьи шкуры
+
+		include block/product.jade
+
+	.container_center
+		h2.title.title__line Дорогой мех
+
+		include block/product.jade
+
+	.container_center
+		h2.title.title__line Как заказать
+
+		.howOrder
+			.howOrder__grid.grid
+				.howOrder__item
+					.howOrder__img
+						img(src="img/zayavka_online.svg", alt="")
+					.howOrder__text Сделайте заявку на сайте или по другим контактам
+				.howOrder__item
+					.howOrder__img
+						img(src="img/soglasovanie.svg", alt="")
+					.howOrder__text С Вами согласуют удобный Вам вариант доставки
+				.howOrder__item
+					.howOrder__img
+						img(src="img/otpracka.svg", alt="")
+					.howOrder__text Отправка на следующий день
+				.howOrder__item
+					.howOrder__img
+						img(src="img/sms_o_dostavke.svg", alt="")
+					.howOrder__text Получаете СМС о приходе товара и забираете заказ
+	.container_center
+		.deliveryAndPay.grid
+			.deliveryAndPay__item
+				h2.title.title__line Доставка
+				
+				.deliveryComp.grid
+					.deliveryComp__item
+						img(src="img/pochta_rossii.png", alt="" width="99")
+					.deliveryComp__item
+						img(src="img/boxberry.png", alt="" width="87")
+					.deliveryComp__item
+						img(src="img/iml.png", alt="" width="96")
+					.deliveryComp__item
+						img(src="img/pickpoint.png", alt="" width="113")
+					.deliveryComp__item
+						img(src="img/shiptor.png", alt="" width="107")
+					.deliveryComp__item
+						img(src="img/dpd.png", alt="" width="103")
+					.deliveryComp__item
+						img(src="../img/cdek.png", alt="" width="106")
+
+				a.deliveryComp__link(href="#") Рассчитать доставку
+				a.deliveryComp__link(href="#") Где забрать
+
+			.deliveryAndPay__item
+				h2.title.title__line Оплата
+				.pay.grid
+					.pay__item
+						.pay__label Банковские карты
+						.pay__content
+							img(src="img/visa.png", alt="" width="59")
+							img(src="img/mc.png", alt="" width="66")
+					.pay__item
+						.pay__label Наложный платеж
+						.pay__content
+							img(src="img/nalozhenniy_platezh.svg", alt="" width="74")
+					.pay__item
+						.pay__label На расчетный счет организации
+						.pay__content
+							img(src="img/na_schet_org.svg", alt="" width="69")
+
+	.container_center
+		h2.title.title__line Вы смотрели
+		- var plate = 4;
+		- var col = 4;
+		include block/product.jade
+
+	.container_center
+		h2.title.title__line Наше производство
+	.production
+		.grid.production__grid
+			.production__item
+				img(src="img/production1.jpg", alt="")
+			.production__item
+				img(src="img/production2.jpg", alt="")
+			.production__item
+				img(src="img/production3.jpg", alt="")

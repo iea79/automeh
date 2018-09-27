@@ -1,13 +1,12 @@
 /* Global variables */
 /* ======================================================================== */
-$main_font_family:								"Open Sans";
-$main_color:									#000;
+$main_font_family:								"Gilroy";
+$main_color:									#1d1d1d;
 $main_line_height:								1.2;
 $main_font_size:								16px;
+$container_width:								1634px;
 
-$container_width:								900px;
-
-$footer_height: 								60px;
+$footer_height: 								604px;
 
 // Color collection for elements
 $color_primary:									#7b8287;
@@ -32,7 +31,7 @@ $el-colors: (
 
 /* Grid */
 /* ======================================================================== */
-$grid_padding:									20px;
+$grid_padding:									67px;
 
 
 /* Form */
@@ -70,7 +69,7 @@ $input_error_border_color:						red;
 $input_error_placeholder_color:					red;
 
 // Button variables
-$btn_default_bg_color:				 			#ddd;
+$btn_default_bg_color:				 			#fff;
 $btn_default_text_color:                        $main_color;
 $btn_contrast_text_color:                       $color_withe;
 $btn_default_bg_color_hover:					#ccc;
