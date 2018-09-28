@@ -110,7 +110,15 @@ $(document).ready(function() {
         focusOnSelect: true
     });
     
-
+    $('.accordeon__item').click(function() {
+        if ($(this).next('.accordeon__element').hasClass('active')) {
+            $(this).next('.accordeon__element').removeClass('active');
+        }
+        else {
+            $('.accordeon__element').removeClass('active');
+            $(this).next('.accordeon__element').addClass('active');
+        }
+    });
 });
 
 $(window).resize(function(event) {
