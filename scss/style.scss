@@ -41,118 +41,22 @@
 @import 'core/topSlider';
 @import 'core/title';
 @import 'core/product';
+@import 'core/production';
 @import 'core/category';
 
 @import 'core/howOrder';
 @import 'core/deliveryAndPay';
+@import 'core/productFilterTabs';
+@import 'core/viewMore';
+@import 'core/topContrast';
 
 
-.topContrast {
-	padding: 9.5% 0 8.6%;
-	margin-bottom: 88px;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	&__title {
-		font-size: 79px;
-		line-height: 1;
-		font-weight: 900;
-		color: #fff;
-		max-width: 81%;
-	}
-	@media (max-width: 991px) {
-	    &__title {
-			font-size: 50px;
-	    }
-	}
-	@media (max-width: 991px) {
-		padding: 76px 0 72px;
-		margin-bottom: 52px;
-	    &__title {
-			font-size: 29px;
-			line-height: 1.2;
-			max-width: none;
-			
-	    }
-	}
-}
-
-.productFilter, .productTabs {
-	margin-left: -10px;
-	margin-right: -10px;
-	@extend %clear_a;
-	&__item {
-		float: left;
-		margin-right: 31px;
-		margin-bottom: 20px;
-	}
-	&__link {
-		@extend %link;
-		font-size: 18px;
-		padding: 3px 10px;
-		letter-spacing: 0.1em;
-		&:not(:first-child) {
-		}
-		
-		&:hover {
-			border-bottom-color: transparent;
-		}
-		&.active,&:hover {
-			background-color: #1d1d1d;
-			color: #fff;
-		}
-	}
-	@media (max-width: 767px) {
-		&__item {
-			margin-right: 2px;
-			margin-bottom: 25px;
-		}
-	    &__link {
-	    	padding: 1px 5px 2px;
-	    	font-size: 10px;
-	    	letter-spacing: 0.15em;
-	    }
-	}
-}
 
 
-.productFilter {
-	margin-bottom: 21px;
-	@media (max-width: 767px) {
-	    margin-bottom: 21px;
-	}
-}
-
-.productTabs {
-	margin-bottom: 66px;
-	@media (max-width: 767px) {
-		margin-bottom: 37px;
-	}
-}
 
 
-.viewMore {
-	margin-bottom: 99px;
-	&__link {
-		color: #1d1d1d;
-		font-weight: 600;
-		font-size: 16px;
-		padding: 10px 0 13px;
-		letter-spacing: 0.22em;
-		text-transform: uppercase;
-		border-bottom: 1px solid rgba(#5d5d5d, .5);
-		&:hover {
-			border-bottom-color: transparent;
-			
-		}
-	}
-	@media (max-width: 767px) {
-		margin-bottom: 70px;
-	    &__link {
-	    	font-size: 10px;
-	    }
-	}
-}
+
+
 
 .typoText {
 	max-width: 1227px;
