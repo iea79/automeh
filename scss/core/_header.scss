@@ -8,7 +8,7 @@
 		padding: 36px 0;
 	}
 	@media (min-width: 1200px) {
-		padding: 71px 0;
+		padding: 71px 0 60px;
 	}
 	.container_center {
 		max-width: 1835px;
@@ -46,6 +46,9 @@
 			padding-top: 12px;
 			text-align: right;
 			margin-right: -10px;
+			a {
+				color: #1d1d1d;
+			}
 			@media (min-width: 992px) {
 				display: inline-block;
 				float: right;
@@ -70,6 +73,9 @@
 		}
 		.soc {
 			a {
+				color: #fff;
+			}
+			[class*="icon"] {
 				color: #fff;
 			}
 		}

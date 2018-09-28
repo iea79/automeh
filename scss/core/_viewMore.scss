@@ -8,9 +8,9 @@
 		letter-spacing: 0.22em;
 		text-transform: uppercase;
 		border-bottom: 1px solid rgba(#5d5d5d, .5);
+		text-decoration: none;
 		&:hover {
 			border-bottom-color: transparent;
-			
 		}
 	}
 	@media (max-width: 767px) {
