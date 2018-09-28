@@ -1,9 +1,8 @@
-// begin header 
-header.header.header_contrast
+mixin header
 	.container_center
 		
 		.header__left
-			a(href="/").logo.logo_contrast
+			a(href="/").logo
 		
 		// begin .header__action 
 		.header__action
@@ -41,3 +40,13 @@ header.header.header_contrast
 		// end.header__center 
 
 // end header 
+
+-if (headerContrast) {
+// begin header 
+header.header.header_contrast
+	+header
+-} else {
+// begin header 
+header.header
+	+header
+-};

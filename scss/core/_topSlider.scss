@@ -51,7 +51,7 @@
 				background-color: #000;
 				z-index: 1;
 				position: relative;
-				
+				filter: grayscale(1);
 				img {
 					width: 100%;
 					opacity: .6;
@@ -59,6 +59,7 @@
 			}
 			&-current {
 				transform: scale(1.2);
+				filter: grayscale(0);
 				z-index: 5;
 				img {
 					opacity: 1;

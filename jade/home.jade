@@ -2,6 +2,7 @@ extends template.jade
 
 block variables
 	-var pageClass = "";
+	-var headerContrast = true;
 
 block title
 	title Home
@@ -22,7 +23,7 @@ block content
 		.topSlider_thumbs
 			-for (var i = 0; i < slide; i++) {
 				.topSlider__item
-					img(src="img/f-slide-sm.jpg", alt="")
+					img(src="img/f-slide-sm"+i+".jpg", alt="")
 			-};
 	// end topSlider 
 
