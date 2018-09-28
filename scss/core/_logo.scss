@@ -1,0 +1,10 @@
+.logo {
+	background: url('../img/logo.svg') no-repeat center center;
+	background-size: 100%;
+	width: 136px;
+	height: 38px;
+	display: inline-block;
+	&_contrast {
+		background-image: url('../img/logo_contrast.svg');
+	}
+}
