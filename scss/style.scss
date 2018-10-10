@@ -35,6 +35,7 @@
 @import 'core/adress';
 
 @import 'vendor/slick';
+@import 'vendor/modal';
 
 
 @import 'core/link';
@@ -718,3 +719,149 @@
 	}
 }
 
+.plus,.minus {
+	width: 27px;
+	height: 27px;
+	background-color: #efefef;
+	border-radius: 50%;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	cursor: pointer;
+	margin-right: -1px;
+	margin-top: 5px;
+	&:before,&:after {
+		content: '';
+		width: 14px;
+		height: 1px;
+		background-color: #5d5d5d;
+		position: absolute;
+		top: 50%;
+		left: 7px;
+	}
+	&:before {
+	}
+	
+}
+.plus {
+	&:after {
+		transform: rotate(90deg);
+	}
+}
+
+
+.addCart {
+	&__row {
+		font-size: 18px;
+		letter-spacing: .1em;
+		margin-bottom: 21px;
+		// @include flex();
+		display: table;
+		width: 100%;
+	}
+	&__item {
+		vertical-align: middle;
+		display: table-cell;
+		&:nth-child(n+2) {
+			padding-left: 23px;
+		}
+		&:first-child {
+			width: 58%;
+		}
+	}
+	&__count {
+		input {
+			margin: 0;
+			border: none !important;
+			background-color: transparent !important;
+			width: auto;
+			display: inline-block;
+			vertical-align: baseline;
+			
+			appearance: none;
+			padding: 0;
+			width: 19px;
+			&:hover {
+				
+			}
+		}
+		.plus,.minus {
+			margin: 0 10px;
+		}
+	}
+	&__action {
+		text-align: right;
+		
+	}
+	&__price {
+		font-size: 30px;
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 20px;
+		letter-spacing: 0.05em;
+	}
+	&__btn {
+		display: inline-block;
+		vertical-align: middle;
+		.btn {
+			margin-left: 17px;
+		}
+	}
+	@media (max-width: 1200px) {
+	    &__row {
+	    	font-size: 16px;
+	    }
+	    &__item {
+	    	white-space: nowrap;
+	    	
+	    	&:first-child {
+	    		width: 50%;
+	    		white-space: normal;
+	    		
+	    	}
+	    }
+	    &__price {
+	    	font-size: 24px;
+	    }
+	}
+	@media (max-width: 767px) {
+	    &__row {
+	    	font-size: 12px;
+	    	margin-bottom: 10px;
+	    	display: block;
+	    	text-align: center;
+	    	border-bottom: 1px solid rgba(#000, .1);
+	    }
+	    &__item {
+	    	white-space: nowrap;
+	    	width: 100%;
+	    	display: block;
+	    	margin-bottom: 10px;
+	    	&:first-child {
+	    		width: 100%;
+	    		white-space: normal;
+	    		
+	    	}
+	    	&:nth-child(n+2) {
+	    		padding-left: 0;
+	    	}
+	    }
+	    &__action {
+	    	text-align: center;
+	    	
+	    }
+	    &__price {
+	    	font-size: 18px;
+	    	display: block;
+	    	margin-bottom: 8px;
+	    	margin-right: 0;
+	    }
+	    &__btn {
+	    	.btn {
+	    		font-size: 11px;
+	    		margin-left: 0;
+	    		margin-bottom: 8px;
+	    	}
+	    }
+	}
+}

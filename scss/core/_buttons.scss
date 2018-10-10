@@ -48,6 +48,21 @@
 		background-color: #fff;
 		border-color: #fff;
 	}
+	&_warning {
+		background-color: #ec3438;
+		border-color: #ec3438;
+		color: #fff;
+		&:hover {
+			background-color: #fff;
+			border-color: #ec3438;
+			color: #ec3438;
+		}
+		&:focus,&:active {
+			background-color: darken(#ec3438, 10%);
+			border-color: #ec3438;
+			color: #fff;
+		}
+	}
 	@media (max-width: 767px) {
 	    border-width: 1px;
 	}
