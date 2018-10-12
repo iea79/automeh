@@ -52,6 +52,9 @@
 @import 'core/topContrast';
 
 @import 'core/ivan';
+@import 'core/addCart';
+@import 'core/cart';
+@import 'core/plus_minus';
 
 .backLink {
 	@extend %link;
@@ -653,215 +656,46 @@
 	padding-top: 50px;
 }
 
-.cart {
-	display: table;
-	clear: both;
-	float: right;
-	top: 101px;
-	position: absolute;
-	right: 38px;
-	&__left {
-		display: table-cell;
-		position: relative;
-		
-	}
-	&__right {
-		display: table-cell;
-		vertical-align: middle;
-		width: 60px;
-		padding-left: 19px;
-		font-size: 18px;
-		cursor: pointer;
-		
-	}
 
-	&__count {
-		position: absolute;
-		border-radius: 50%;
-		right: 10%;
-		top: -5px;
-		// top: 0;
-		background-color: $main_color;
-		color: #fff;
-		display: block;
-		min-width: 23px;
-		line-height: 23px;
-		text-align: center;
-		font-size: 14px;
-		font-weight: 900;
-		cursor: pointer;
-		
+.title__cart {
+	margin-bottom: 1em;
+}
+
+.order {
+	max-width: 900px;
+	margin-top: 52px;
+	margin-bottom: 100px;
+	&__title {
+		margin-bottom: 30px;
+		font-size: 22px;
+		font-weight: bold;
 	}
-	.icon-cart {
-		font-size: 37px;
+	&__num {
+		// float: right;
+		font-size: 22px;
+		font-weight: bold;
+		margin-bottom: 10px;
 	}
-	@media (max-width: 1199px) {
-	    top: 62px;
+	p {
+		max-width: 300px;
+		line-height: 1.2;
 	}
 	@media (max-width: 767px) {
-		top: 72px;
-		right: 30px;
-	    .icon-cart {
-	    	font-size: 26px;
-	    }
-	    &__right {
-	    	font-size: 12px;
-	    	padding-left: 10px;
-	    	width: 66px;
-	    }
-	    &__count {
-	    	min-width: 18px;
-	    	line-height: 18px;
-	    	font-size: 12px;
-	    	top: -6px;
-	    	left: 34%;
-	    }
+		margin-top: 20px;
+		&__title {
+			font-size: 16px;
+			margin-bottom: 25px;
+		}
+		&__num {
+			float: none;
+			font-size: 18px;
+			// margin-bottom: 50px;
+		}
+		p {
+			font-size: 12px;
+		}
 	}
 }
-
-.plus,.minus {
-	width: 27px;
-	height: 27px;
-	background-color: #efefef;
-	border-radius: 50%;
-	position: relative;
-	display: inline-block;
-	vertical-align: middle;
-	cursor: pointer;
-	margin-right: -1px;
-	margin-top: 5px;
-	&:before,&:after {
-		content: '';
-		width: 14px;
-		height: 1px;
-		background-color: #5d5d5d;
-		position: absolute;
-		top: 50%;
-		left: 7px;
-	}
-	&:before {
-	}
-	
-}
-.plus {
-	&:after {
-		transform: rotate(90deg);
-	}
-}
-
-
-.addCart {
-	&__row {
-		font-size: 18px;
-		letter-spacing: .1em;
-		margin-bottom: 21px;
-		// @include flex();
-		display: table;
-		width: 100%;
-	}
-	&__item {
-		vertical-align: middle;
-		display: table-cell;
-		&:nth-child(n+2) {
-			padding-left: 23px;
-		}
-		&:first-child {
-			width: 58%;
-		}
-	}
-	&__count {
-		input {
-			margin: 0;
-			border: none !important;
-			background-color: transparent !important;
-			width: auto;
-			display: inline-block;
-			vertical-align: baseline;
-			
-			appearance: none;
-			padding: 0;
-			width: 19px;
-			&:hover {
-				
-			}
-		}
-		.plus,.minus {
-			margin: 0 10px;
-		}
-	}
-	&__action {
-		text-align: right;
-		
-	}
-	&__price {
-		font-size: 30px;
-		display: inline-block;
-		vertical-align: middle;
-		margin-right: 20px;
-		letter-spacing: 0.05em;
-	}
-	&__btn {
-		display: inline-block;
-		vertical-align: middle;
-		.btn {
-			margin-left: 17px;
-		}
-	}
-	@media (max-width: 1200px) {
-	    &__row {
-	    	font-size: 16px;
-	    }
-	    &__item {
-	    	white-space: nowrap;
-	    	
-	    	&:first-child {
-	    		width: 50%;
-	    		white-space: normal;
-	    		
-	    	}
-	    }
-	    &__price {
-	    	font-size: 24px;
-	    }
-	}
-	@media (max-width: 767px) {
-	    &__row {
-	    	font-size: 12px;
-	    	margin-bottom: 10px;
-	    	display: block;
-	    	text-align: center;
-	    	border-bottom: 1px solid rgba(#000, .1);
-	    }
-	    &__item {
-	    	white-space: nowrap;
-	    	width: 100%;
-	    	display: block;
-	    	margin-bottom: 10px;
-	    	&:first-child {
-	    		width: 100%;
-	    		white-space: normal;
-	    		
-	    	}
-	    	&:nth-child(n+2) {
-	    		padding-left: 0;
-	    	}
-	    }
-	    &__action {
-	    	text-align: center;
-	    	
-	    }
-	    &__price {
-	    	font-size: 18px;
-	    	display: block;
-	    	margin-bottom: 8px;
-	    	margin-right: 0;
-	    }
-	    &__btn {
-	    	.btn {
-	    		font-size: 11px;
-	    		margin-left: 0;
-	    		margin-bottom: 8px;
-	    	}
-	    }
-	}
+.cart-container {
+	max-width: 1050px;
 }
