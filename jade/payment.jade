@@ -1,0 +1,56 @@
+extends template.jade
+
+block variables
+	-var pageClass = "";
+	-var cart = false;
+
+block title
+	title About
+
+block content
+	.container_center
+		//- a.backLink(href="shop.html") Смотреть каталог
+
+		h2.title.title__line Оплата заказа
+		form.form.form_order.form_inline
+			.form__row
+				label.form__label ФИО
+				.form__field
+					input(type="text")
+			.form__row
+				label.form__label Телефон
+				.form__field
+					input(type="text")
+			.form__row
+				label.form__label Электронная почта
+				.form__field
+					input(type="text")
+			.form__row
+				label.form__label Адрес
+				.form__field
+					input(type="text")
+			.form__row
+				label.form__label Комментарий к заказу
+				.form__field
+					input(type="text")
+			.form__row
+				label.form__label
+				.form__action
+					button.btn.btn_warning Оформить заказ
+					.form__info  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, at dignissimos, quos quo laborum architecto.
+
+		.payment__body
+			.paymentItem
+				.paymentItem__title Оплата наличными
+				.paymentItem__text при получении в пунке выдачи или крурьеру
+			.paymentItem
+				.paymentItem__title Оплата банковской картой
+				.paymentItem__text при получении или при оформлении заказа
+			.paymentItem
+				.paymentItem__title Оплата по квитанции
+				.paymentItem__text в любом отделении банка или через клиент банк
+				a(href="#").paymentItem__link Cкачать квитанцию
+			.paymentItem
+				.paymentItem__title Оплата с расчетного счета организации
+				.paymentItem__text Полный пакет бухгалтерских документов, договор
+				a(href="#").paymentItem__link Cкачать квитанцию
